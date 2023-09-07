@@ -5,3 +5,12 @@
 #    url: jdbc:mysql://{엔드포인트}:{포트번호}/{(초기)데이터베이스}?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
 #    username: {마스터 사용자 이름}
 #    password: {마스터 암호}
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+      use-new-id-generator-mappings: false
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    generate-ddl: true
+    show-sql: true
