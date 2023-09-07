@@ -5,10 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.sql.Date;
+
 @Entity
 @Data
 @Builder
@@ -20,4 +19,12 @@ public class Sale_Rate {
     private int ID;
     private int Item_Price;
     private int Same_Day_Sale_Rate;
+
+    @ManyToOne
+    private Shop shop;
+    @ManyToOne
+    private Item item;
+
+    @Temporal(TemporalType.DATE)
+    private Date date;
 }
