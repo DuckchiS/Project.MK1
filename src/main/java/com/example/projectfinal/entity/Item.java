@@ -23,6 +23,6 @@ public class Item {
     @ManyToOne
     private Category category;
 
-    @OneToMany(mappedBy = "Item", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "item", fetch = FetchType.EAGER)
     List<Sale_Rate> saleRates = new ArrayList<>();
 }

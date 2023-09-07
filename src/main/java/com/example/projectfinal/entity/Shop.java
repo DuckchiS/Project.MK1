@@ -20,6 +20,6 @@ public class Shop {
     private int Shop_ID;
     private String Shop_Name;
 
-    @OneToMany(mappedBy = "Shop", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "shop", fetch = FetchType.EAGER)
     List<Sale_Rate> saleRates = new ArrayList<>();
 }
