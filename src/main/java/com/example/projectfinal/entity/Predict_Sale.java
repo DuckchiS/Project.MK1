@@ -14,11 +14,15 @@ import java.util.Date;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "predictSale", schema = "predictSale_schema")
 public class Predict_Sale {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ID;
     private int P_Sale_Rate;
+
+    @ManyToOne
+    private Item item;
 
     @Temporal(TemporalType.DATE)
     private Date date;

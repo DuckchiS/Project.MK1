@@ -14,12 +14,20 @@ import java.util.Date;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Order {
+@Table(name = "orders", schema = "order_schema")
+public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String Order_ID;
+    private int ID;
     private String Order_State;
     private int Order_Quantity;
+    private int Price;
+
+    @ManyToOne
+    private Item item;
+    @ManyToOne
+    @JoinColumn(name = "shop_id")
+    private Shop shop;
 
 
     @Temporal(TemporalType.DATE)

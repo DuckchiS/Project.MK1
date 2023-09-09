@@ -14,11 +14,12 @@ import java.util.Date;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "saleRate", schema = "saleRate_schema")
 public class Sale_Rate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ID;
-    private int Item_Price;
+    private float Item_Price;
     private int Same_Day_Sale_Rate;
 
     @ManyToOne

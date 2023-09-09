@@ -14,12 +14,16 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "shop", schema = "shop_schema")
 public class Shop {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Shop_ID;
+    private int ID;
     private String Shop_Name;
 
-    @OneToMany(mappedBy = "shop", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "shop", fetch = FetchType.LAZY)
     List<Sale_Rate> saleRates = new ArrayList<>();
+
+    @OneToMany(mappedBy = "shop", fetch = FetchType.LAZY)
+    List<Orders> orders = new ArrayList<>();
 }
