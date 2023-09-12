@@ -19,7 +19,7 @@ public class Sale_Rate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ID;
-    private float Item_Price;
+    private int Item_Price;
     private int Same_Day_Sale_Rate;
 
     @ManyToOne
