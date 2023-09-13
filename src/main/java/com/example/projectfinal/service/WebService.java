@@ -14,20 +14,11 @@ import java.util.stream.Collectors;
 public class WebService {
     private Sale_RateRepository saleRateRepository;
     private OrderRepository orderRepository;
-    private ItemRepository itemRepository;
-    private Predict_SaleRepository predictSaleRepository;
-    private ShopRepository shopRepository;
 
     public WebService(Sale_RateRepository saleRateRepository,
-                      OrderRepository orderRepository,
-                      ItemRepository itemRepository,
-                      Predict_SaleRepository predictSaleRepository,
-                      ShopRepository shopRepository){
+                      OrderRepository orderRepository){
         this.saleRateRepository = saleRateRepository;
         this.orderRepository = orderRepository;
-        this.itemRepository = itemRepository;
-        this.predictSaleRepository = predictSaleRepository;
-        this.shopRepository = shopRepository;
     }
 
     public List<Sale_RateVO> main(){
