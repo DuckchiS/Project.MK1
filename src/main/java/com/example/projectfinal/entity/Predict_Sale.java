@@ -19,10 +19,12 @@ public class Predict_Sale {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ID;
+    //판매량 예측
     private int P_Sale_Rate;
 
     @ManyToOne
     private Item item;
+
 
     @Temporal(TemporalType.DATE)
     private Date date;

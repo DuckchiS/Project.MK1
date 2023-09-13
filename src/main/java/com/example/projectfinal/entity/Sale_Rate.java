@@ -20,12 +20,15 @@ public class Sale_Rate {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ID;
     private int Item_Price;
+    //당일 판매량
     private int Same_Day_Sale_Rate;
 
     @ManyToOne
     private Shop shop;
     @ManyToOne
     private Item item;
+    @OneToOne
+    private Predict_Sale predictSale;
 
     @Temporal(TemporalType.DATE)
     private Date date;

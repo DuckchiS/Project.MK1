@@ -37,6 +37,11 @@ public class WebService {
                 saleRate -> Sale_RateVO.builder()
                         .sale(saleRate.getSame_Day_Sale_Rate())
                         .date(saleRate.getDate())
+                        .s_id(saleRate.getShop().getID())
+                        .i_id(saleRate.getItem().getID())
+                        .s_name(saleRate.getShop().getShop_Name())
+                        .i_name(saleRate.getItem().getItem_Name())
+                        .sale_predict(saleRate.getPredictSale().getP_Sale_Rate())
                         .build()
         ).collect(Collectors.toList());
         return saleRateVOList;
@@ -49,6 +54,11 @@ public class WebService {
                 saleRate -> Sale_RateVO.builder()
                         .sale(saleRate.getSame_Day_Sale_Rate())
                         .date(saleRate.getDate())
+                        .s_id(saleRate.getShop().getID())
+                        .i_id(saleRate.getItem().getID())
+                        .s_name(saleRate.getShop().getShop_Name())
+                        .i_name(saleRate.getItem().getItem_Name())
+                        .sale_predict(saleRate.getPredictSale().getP_Sale_Rate())
                         .build()
         ).collect(Collectors.toList());
         return saleRateVOList;
@@ -60,7 +70,9 @@ public class WebService {
         List<OrderVO> orderVOList = result.stream().map(
                 orderEntity -> OrderVO.builder()
                         .date(orderEntity.getDate())
-                        .id(orderEntity.getID())
+                        .s_id(orderEntity.getShop().getID())
+                        .s_name(orderEntity.getShop().getShop_Name())
+                        .i_name(orderEntity.getItem().getItem_Name())
                         .quantity(orderEntity.getOrder_Quantity())
                         .State(orderEntity.getOrder_State())
                         .price(orderEntity.getPrice())

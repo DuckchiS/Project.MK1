@@ -10,10 +10,10 @@ import java.util.Date;
 @Data
 @Builder
 public class OrderVO {
-    private int id;
-    private String name;
+    private int s_id;
+    private String s_name;
     private String State;
-    private String pname;
+    private String i_name;
     private int price;
     private int quantity;
 
