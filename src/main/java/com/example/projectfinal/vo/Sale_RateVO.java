@@ -19,5 +19,5 @@ public class Sale_RateVO {
     @Temporal(TemporalType.DATE)
     private Date date;
 
-    private int sale_predict;
+    private float sale_predict;
 }

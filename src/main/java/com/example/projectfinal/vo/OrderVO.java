@@ -10,13 +10,12 @@ import java.util.Date;
 @Data
 @Builder
 public class OrderVO {
-    private int s_id;
-    private String s_name;
-    private String State;
-    private String i_name;
-    private int price;
-    private int quantity;
-
     @Temporal(TemporalType.DATE)
     private Date date;
+
+    private int s_id;
+    private String s_name;
+    private String i_name;
+    private int quantity;
+    private String State;
 }

@@ -25,22 +25,22 @@ public class WebController {
     }
 
     @GetMapping("/")
-    public ResponseEntity<Object> main(){
-        List<Sale_RateVO> saleRateVOList1 = webService.main();
+    public ResponseEntity<Object> Main(){
+        List<Sale_RateVO> saleRateVOList1 = webService.Main();
 
         return ResponseEntity.ok().body(saleRateVOList1);
     }
 
     @GetMapping("/orders")
-    public ResponseEntity<Object> order(){
-        List<OrderVO> orderVOList = webService.orders();
+    public ResponseEntity<Object> Order(){
+        List<OrderVO> orderVOList = webService.Orders();
 
         return ResponseEntity.ok().body(orderVOList);
     }
 
     @GetMapping("/detail")
-    public ResponseEntity<Object> detail(){
-        List<Sale_RateVO> saleRateVOList = webService.detail();
+    public ResponseEntity<Object> Detail(){
+        List<Sale_RateVO> saleRateVOList = webService.Detail();
 
         return ResponseEntity.ok().body(saleRateVOList);
     }
