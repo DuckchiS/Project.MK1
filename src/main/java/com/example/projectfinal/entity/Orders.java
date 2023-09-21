@@ -21,6 +21,7 @@ public class Orders {
     private int ID;
     private String Order_State;
     private int Order_Quantity;
+    private int Order_Price;
 
     @ManyToOne
     private Item item;

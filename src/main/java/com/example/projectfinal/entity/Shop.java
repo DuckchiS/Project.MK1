@@ -21,9 +21,15 @@ public class Shop {
     private int ID;
     private String Shop_Name;
 
+    @OneToOne
+    private Item item;
+
     @OneToMany(mappedBy = "shop", fetch = FetchType.LAZY)
     List<Sale_Rate> saleRates = new ArrayList<>();
 
     @OneToMany(mappedBy = "shop", fetch = FetchType.LAZY)
     List<Orders> orders = new ArrayList<>();
+
+    @OneToOne
+    private Predict_Sale predictSale;
 }

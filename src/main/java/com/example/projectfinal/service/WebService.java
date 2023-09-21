@@ -66,6 +66,7 @@ public class WebService {
                         .i_name(orderEntity.getItem().getItem_Name())
                         .quantity(orderEntity.getOrder_Quantity())
                         .State(orderEntity.getOrder_State())
+                        .Price(orderEntity.getOrder_Price())
                         .build()
         ).collect(Collectors.toList());
 
