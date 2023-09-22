@@ -1,12 +1,17 @@
-package com.example.projectfinal.entity;
+package com.example.projectfinal.entity.function;
 
+import com.example.projectfinal.entity.Item;
+import com.example.projectfinal.entity.Shop;
+import com.example.projectfinal.entity.relationship.Order_Relationship;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -23,12 +28,8 @@ public class Orders {
     private int Order_Quantity;
     private int Order_Price;
 
-    @ManyToOne
-    private Item item;
-    @ManyToOne
-    @JoinColumn(name = "shop_id")
-    private Shop shop;
-
+    @OneToMany(mappedBy = "orders", fetch = FetchType.LAZY)
+    List<Order_Relationship> order = new ArrayList<>();
 
     @Temporal(TemporalType.DATE)
     private Date date;

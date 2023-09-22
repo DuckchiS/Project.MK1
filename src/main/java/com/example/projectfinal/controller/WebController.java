@@ -1,7 +1,5 @@
 package com.example.projectfinal.controller;
 
-import com.example.projectfinal.entity.Orders;
-import com.example.projectfinal.entity.Sale_Rate;
 import com.example.projectfinal.service.WebService;
 import com.example.projectfinal.vo.OrderVO;
 import com.example.projectfinal.vo.Sale_RateVO;

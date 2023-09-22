@@ -1,5 +1,8 @@
 package com.example.projectfinal.entity;
 
+import com.example.projectfinal.entity.relationship.Order_Relationship;
+import com.example.projectfinal.entity.relationship.Predict_Relationship;
+import com.example.projectfinal.entity.relationship.Sale_Relationship;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,15 +27,12 @@ public class Item {
     @ManyToOne
     private Category category;
 
-    @OneToOne
-    private Shop shop;
+    @OneToMany(mappedBy = "item", fetch = FetchType.LAZY)
+    List<Sale_Relationship> sale = new ArrayList<>();
 
     @OneToMany(mappedBy = "item", fetch = FetchType.LAZY)
-    List<Sale_Rate> saleRates = new ArrayList<>();
+    List<Order_Relationship> order = new ArrayList<>();
 
     @OneToMany(mappedBy = "item", fetch = FetchType.LAZY)
-    List<Orders> orders = new ArrayList<>();
-
-    @OneToOne
-    private Predict_Sale predictSale;
+    List<Predict_Relationship> predict = new ArrayList<>();
 }
