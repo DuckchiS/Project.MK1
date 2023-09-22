@@ -1,35 +1,29 @@
-package com.example.projectfinal.entity;
+package com.example.projectfinal.entity.relationship;
 
+import com.example.projectfinal.entity.Item;
+import com.example.projectfinal.entity.Shop;
+import com.example.projectfinal.entity.function.Orders;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
-
 
 @Entity
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "saleRate", schema = "saleRate_schema")
-public class Sale_Rate {
+public class Order_Relationship {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ID;
-    private int Item_Price;
-    //당일 판매량
-    private int Same_Day_Sale_Rate;
 
     @ManyToOne
     private Shop shop;
     @ManyToOne
     private Item item;
-    @OneToOne
-    private Predict_Sale predictSale;
-
-    @Temporal(TemporalType.DATE)
-    private Date date;
+    @ManyToOne
+    private Orders orders;
 }
