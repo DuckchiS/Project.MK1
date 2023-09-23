@@ -1,8 +1,6 @@
-package com.example.projectfinal.entity.function;
+package com.example.projectfinal.entity;
 
-import com.example.projectfinal.entity.Item;
-import com.example.projectfinal.entity.Shop;
-import com.example.projectfinal.entity.relationship.Sale_Relationship;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,9 +26,13 @@ public class Sale_Rate {
     //당일 판매량
     private int Same_Day_Sale_Rate;
 
+    @ManyToOne
+    private Shop shop;
+    @ManyToOne
+    private Item item;
+    @OneToOne
+    private Predict_Sale predictSale;
+
     @Temporal(TemporalType.DATE)
     private Date date;
-
-    @OneToMany(mappedBy = "saleRate", fetch = FetchType.LAZY)
-    List<Sale_Relationship> sale = new ArrayList<>();
 }
