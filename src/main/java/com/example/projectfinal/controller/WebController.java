@@ -42,5 +42,4 @@ public class WebController {
 
         return ResponseEntity.ok().body(saleRateVOList);
     }
-
 }
