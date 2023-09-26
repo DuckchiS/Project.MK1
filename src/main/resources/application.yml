@@ -22,5 +22,5 @@ spring:
     show-sql: true
 
 jwt:
-  secret: gom12313##@#!Jkmdkiijfiakershawadfkmvc##@kdf34234kdfisojkfmadmaxiefkd  # 길어야 함
+  secret: ${JWT}# 길어야 함
   token.expired-time-ms: 2592000000 # 30 days
