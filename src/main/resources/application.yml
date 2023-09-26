@@ -22,5 +22,5 @@ spring:
     show-sql: true
 
 jwt:
-  secret: ${JWT}# 길어야 함
+  secret: ${JWT}
   token.expired-time-ms: 2592000000 # 30 days
