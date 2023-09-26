@@ -10,7 +10,7 @@ public class SimpleException extends RuntimeException{
     private ErrorCode errorCode;
     private String message;
 
-    public SimpleException(ErrorCode errorCode) {
+    public SimpleException(ErrorCode errorCode, String format) {
         this.errorCode = errorCode;
         this.message = null;
     }

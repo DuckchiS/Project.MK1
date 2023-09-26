@@ -1,6 +1,6 @@
 package com.example.projectfinal.config.filter;
 
-import com.example.projectfinal.entity.User;
+import com.example.projectfinal.model.User;
 import com.example.projectfinal.service.UserService;
 import com.example.projectfinal.util.JwtTokenUtils;
 import lombok.RequiredArgsConstructor;
@@ -30,7 +30,8 @@ public class JwtTokenFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request,
                                     HttpServletResponse response,
-                                    FilterChain chain) throws ServletException, IOException {
+                                    FilterChain chain)
+            throws ServletException, IOException {
         final String header = request.getHeader(HttpHeaders.AUTHORIZATION);
         final String token;
         try {

@@ -1,6 +1,6 @@
 package com.example.projectfinal.repository;
 
-import com.example.projectfinal.entity.Category;
+import com.example.projectfinal.model.entity.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,11 +1,10 @@
 package com.example.projectfinal.service;
 
-import com.example.projectfinal.entity.Orders;
-import com.example.projectfinal.entity.Sale_Rate;
+import com.example.projectfinal.model.entity.Orders;
+import com.example.projectfinal.model.entity.Sale_Rate;
 import com.example.projectfinal.repository.*;
 import com.example.projectfinal.vo.OrderVO;
 import com.example.projectfinal.vo.Sale_RateVO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
