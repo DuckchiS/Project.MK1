@@ -1,10 +1,8 @@
 package com.example.projectfinal.repository;
 
-import com.example.projectfinal.entity.Item;
+import com.example.projectfinal.model.entity.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 @Repository
 public interface ItemRepository extends JpaRepository<Item, Integer> {

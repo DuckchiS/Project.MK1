@@ -1,4 +1,4 @@
-package com.example.projectfinal.entity;
+package com.example.projectfinal.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,13 +12,11 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "user", schema = "user_schema")
-public class User {
+@Table(name = "category", schema = "category_schema")
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ID;
-    private String Username;
-    private String PassWord;
-    private String Name;
-    private UserRole role;
+    private String Category_Name;
+
 }
